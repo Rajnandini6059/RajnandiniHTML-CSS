@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Portal</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .main-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1, h2 {
+            color: #2a5d9a;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #4a5568;
+            text-align: center;
+        }
+
+        /* List Styling */
+        .dept-list {
+            background: #eef4fb;
+            padding: 20px 40px;
+            border-radius: 8px;
+            column-count: 2; /* Splits list into two columns */
+            list-style-type: square;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #cbd5e0;
+        }
+
+        table th {
+            background-color: #2a5d9a;
+            color: white;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: #f9fafb;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .gender-container {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>City Healthcare Center</h1>
+        
+        <p>Welcome to our professional medical portal. We provide world-class healthcare services with a focus on patient comfort and advanced medical technology. Please select your department and check doctor availability before booking your slot.</p>
+
+        <h2>Our Specialized Departments</h2>
+        <ul class="dept-list">
+            <li>Cardiology</li>
+            <li>Neurology</li>
+            <li>Pediatrics</li>
+            <li>Orthopedics</li>
+            <li>Dermatology</li>
+            <li>Oncology</li>
+        </ul>
+
+        <h2>Doctor Availability</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Specialty</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. Sarah Chen</td>
+                    <td>Cardiology</td>
+                    <td>Mon - Wed (9 AM - 1 PM)</td>
+                </tr>
+                <tr>
+                    <td>Dr. James Wilson</td>
+                    <td>Neurology</td>
+                    <td>Tue - Thu (2 PM - 6 PM)</td>
+                </tr>
+                <tr>
+                    <td>Dr. Elena Smith</td>
+                    <td>Pediatrics</td>
+                    <td>Friday (10 AM - 4 PM)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Book an Appointment</h2>
+        <form action="blank">
+            <label for="PatientName">Patient Name</label>
+            <input type="text" name="PatientName" id="PatientName" placeholder="Enter your full name">
+
+            <label for="MobileNumber">Mobile Number</label>
+            <input type="number" name="MobileNumber" id="MobileNumber" placeholder="e.g. 1234567890">
+
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="name@example.com">
+
+            <label for="Symptoms">Symptoms</label>
+            <input type="text" name="Symptoms" id="Symptoms" placeholder="Briefly describe symptoms">
+
+            <label>Gender</label>
+            <div class="gender-container">
+                <span>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label for="male" style="display:inline; font-weight:normal;">Male</label>
+                </span>
+                <span>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female" style="display:inline; font-weight:normal;">Female</label>
+                </span>
+            </div>
+
+            <button type="submit">Make an Appointment</button>
+        </form>
+    </div>
+
+</body>
+</html>
